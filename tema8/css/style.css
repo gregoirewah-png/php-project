@@ -1,0 +1,57 @@
+.contenedor{
+    display: wrap;
+    flex-wrap: wrap;
+    width: 600px;
+    gap: 16px;
+}
+
+.figurita{
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+    background-color: brown;
+    transition:0.5s;
+}
+
+.figurita:hover{
+    background-color: rgb(211, 43, 226);
+    cursor: pointer;
+}
+
+.seleccionada{
+    background-color: black;
+}
+
+/*Clases de animacion*/
+
+.rotar{
+    background-color: red;
+    animation: girar 2s linear infinite;
+}
+
+.mover{
+    background-color: green;
+    animation: moverabajo 2s ease-in-out infinite alternate;
+}
+
+.escalar{
+    background-color: blue;
+    animation: crecer 2s ease-in-out infinite alternate;
+}
+
+/*Animaciones*/
+
+@keyframes girar{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+@keyframes moverabajo {
+    from{transform: translateY(0);
+    to{transform: translateY(128px);}}
+}
+
+@keyframes crecer{
+    from{transform: scale(1);}
+    to{transform: scale(1.5);}
+}
